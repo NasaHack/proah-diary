@@ -1,8 +1,8 @@
 (() => {
-  let [M, D, Y, h, m, s, AM_PM] = new Date()
+  let [M, D, Y, h, m, _, AM_PM] = new Date()
     .toLocaleString()
     .replaceAll(/[\/ ,:]/g, " ")
     .split(" ")
     .filter(Boolean);
-  console.log(`${D}-${M}-${Y}_${h}-${m}-${s}-${AM_PM}.md`);
+  console.log(`${D}-${M}-${Y}_${h}:${m}${AM_PM}.md`);
 })();
